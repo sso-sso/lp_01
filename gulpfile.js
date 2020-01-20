@@ -3,7 +3,10 @@ const gulp = require("gulp");
 // Sassをコンパイルするプラグインを読み込みます
 const sass = require("gulp-sass");
 
-var connect = require("gulp-connect");
+/**
+* これはすでに非推奨！！！
+* var connect = require("gulp-connect");
+*/
 
 var browserSync = require('browser-sync').create();
 
