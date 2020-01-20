@@ -21,7 +21,7 @@ gulp.task("default", function() {
     }));
 });
 
-// Connect 
+// Connect
 
 
 // Browser sync
@@ -34,12 +34,10 @@ gulp.task('browser-sync', function() {
   });
 });
 
-/**
- * Sassをコンパイルするタスクです
- */
+// Compile Sass
 const compileSass = () =>
   // style.scssファイルを取得
-  gulp.src("css/style.scss")
+  gulp.src("src/assets/_sass/style.scss")
     // Sassのコンパイルを実行
     .pipe(
       // コンパイル後のCSSを展開
@@ -48,12 +46,12 @@ const compileSass = () =>
       })
     )
     // cssフォルダー以下に保存
-    .pipe(gulp.dest("css"));
+    .pipe(gulp.dest("src/assets/css"));
 
 /**
  * Sassファイルを監視し、変更があったらSassを変換します
  */
-const watchSassFiles = () => gulp.watch("css/style.scss", compileSass);
+const watchSassFiles = () => gulp.watch("src/assets/_sass/style.scss", compileSass);
 
 // npx gulpというコマンドを実行した時、watchSassFilesが実行されるようにします
 exports.default = watchSassFiles;
