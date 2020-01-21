@@ -3,55 +3,65 @@ const gulp = require("gulp");
 // Sassをコンパイルするプラグインを読み込みます
 const sass = require("gulp-sass");
 
+var browserSync = require('browser-sync').create();
+
 /**
 * これはすでに非推奨！！！
 * var connect = require("gulp-connect");
+* var webserver = require("gulp-webserver");
 */
 
-var browserSync = require('browser-sync').create();
-
-var webserver = require("gulp-webserver");
-
-// Localhost
-gulp.task("default", function() {
-  return gulp.src('LP_01')
-    .pipe(webserver({
-      livereload: true,
-      open: true
-    }));
+// Reload
+gulp.task('reload', function(done) {
+  browserSync.reload();
+  done();
 });
 
-// Connect
-
-
-// Browser sync
-gulp.task('browser-sync', function() {
+// BrowserSync
+gulp.task('server', function(done) {
   browserSync.init({
       server: {
-          baseDir: "./"
-      },
-      startPath: './*.html',
+          baseDir: 'src/',/* ブラウザに表示させたいHTMLがあるディレクトを指定しましょう。 */
+          index: 'index.html' /* ブラウザに表示させたいHTMLファイルを書きます。 */
+      }
   });
+  done();
 });
 
+// Watch
+gulp.task('watch', function(done) {
+  // createフォルダ内の*.js,*.htmlが更新されたら、reload関数を呼び出す
+  gulp.watch('src/index.html', gulp.series('reload'/*タスク名*/));
+  gulp.watch('src/js/*.js', gulp.series('reload'));
+  // scssフォルダ内が更新されたら、sass関数を呼び出す
+  // gulp.watch('./src/assets/_sass/*.scss', gulp.series('sass'));
+
+  done();
+});
+
+gulp.task('default',
+    gulp.parallel('watch', 'server')
+);
+
+
 // Compile Sass
-const compileSass = () =>
-  // style.scssファイルを取得
-  gulp.src("src/assets/_sass/style.scss")
-    // Sassのコンパイルを実行
-    .pipe(
-      // コンパイル後のCSSを展開
-      sass({
-        outputStyle: "expanded"
-      })
-    )
-    // cssフォルダー以下に保存
-    .pipe(gulp.dest("src/assets/css"));
+// const compileSass = () =>
+//   // style.scssファイルを取得
+//   gulp.src("src/assets/_sass/style.scss")
+//     // Sassのコンパイルを実行
+//     .pipe(
+//       // コンパイル後のCSSを展開
+//       sass({
+//         outputStyle: "expanded"
+//       })
+//     )
+//     // cssフォルダー以下に保存
+//     .pipe(gulp.dest("src/assets/css"));
 
-/**
- * Sassファイルを監視し、変更があったらSassを変換します
- */
-const watchSassFiles = () => gulp.watch("src/assets/_sass/style.scss", compileSass);
+// /**
+//  * Sassファイルを監視し、変更があったらSassを変換します
+//  */
+// const watchSassFiles = () => gulp.watch("src/assets/_sass/style.scss", compileSass);
 
-// npx gulpというコマンドを実行した時、watchSassFilesが実行されるようにします
-exports.default = watchSassFiles;
+// // npx gulpというコマンドを実行した時、watchSassFilesが実行されるようにします
+// exports.default = watchSassFiles;
