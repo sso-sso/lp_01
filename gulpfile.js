@@ -1,7 +1,13 @@
-// gulpプラグインを読み込みます
+/*
+gulpプラグインを読み込みます
+*/
 const gulp = require("gulp");
 // Sassをコンパイルするプラグインを読み込みます
 const sass = require("gulp-sass");
+
+var autoprefixer = require('gulp-autoprefixer');
+
+var plumber = require('gulp-plumber');
 
 var browserSync = require('browser-sync').create();
 
@@ -10,6 +16,21 @@ var browserSync = require('browser-sync').create();
 * var connect = require("gulp-connect");
 * var webserver = require("gulp-webserver");
 */
+
+// Compile Sass
+gulp.task('sass', function(done) {
+  gulp.src('src/assets/_sass/*.scss')
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
+    .pipe(sass())
+    .pipe(autoprefixer({
+      cascade: false
+    }))
+    .pipe(gulp.dest('src/assets/css/'))
+    .pipe(browserSync.stream());
+  done();
+})
 
 // Reload
 gulp.task('reload', function(done) {
