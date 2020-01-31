@@ -7,6 +7,8 @@ const sass = require("gulp-sass");
 
 var autoprefixer = require('gulp-autoprefixer');
 
+var notify = require('gulp-notify');
+
 var plumber = require('gulp-plumber');
 
 var browserSync = require('browser-sync').create();
@@ -19,7 +21,7 @@ var browserSync = require('browser-sync').create();
 
 // Compile Sass
 gulp.task('sass', function(done) {
-  gulp.src('src/assets/_sass/*.scss')
+  gulp.src('src/assets/_sass/style.scss')
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
@@ -27,10 +29,10 @@ gulp.task('sass', function(done) {
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(gulp.dest('src/assets/css/'))
+    .pipe(gulp.dest('src/assets/css'))
     .pipe(browserSync.stream());
   done();
-})
+});
 
 // Reload
 gulp.task('reload', function(done) {
@@ -53,13 +55,14 @@ gulp.task('server', function(done) {
 gulp.task('watch', function(done) {
   // createフォルダ内の*.js,*.htmlが更新されたら、reload関数を呼び出す
   gulp.watch('src/index.html', gulp.series('reload'/*タスク名*/));
-  gulp.watch('src/js/*.js', gulp.series('reload'));
+  gulp.watch('src/assets/js/*.js', gulp.series('reload'));
   // scssフォルダ内が更新されたら、sass関数を呼び出す
-  // gulp.watch('./src/assets/_sass/*.scss', gulp.series('sass'));
+  gulp.watch('src/assets/_sass/style.scss', gulp.series('sass'));
 
   done();
 });
 
+// Default
 gulp.task('default',
     gulp.parallel('watch', 'server')
 );
