@@ -405,24 +405,31 @@ body {
         vertical-align: baseline; }
 
 .movie-container {
-  background: #0a8cd6;
-  padding: 0 0 120px; }
-  .movie-container__inner {
-    padding: 0 0 120px;
+  background: #0a8cd6; }
+  .movie-container .section-movie__inner {
+    padding: 40px 0 100px;
     text-align: center;
     color: #000; }
-  .movie-container__title {
-    padding: 20px 0 0; }
-    .movie-container__title img {
-      width: 50vw;
+  .movie-container .section-movie__title {
+    width: 65vw;
+    margin: 0 auto 20px; }
+    .movie-container .section-movie__title img {
+      width: 100%;
       margin: 0 auto 3vw; }
-  .movie-container__lead {
-    font-size: 1.3rem;
-    margin: 0 auto 3vw; }
-  .movie-container__movie {
+  .movie-container .section-movie__lead {
+    margin: 0 8vw 40px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 1.6px; }
+  .movie-container .section-movie__movie {
     position: relative;
-    width: 790px;
-    margin: 0 auto; }
+    width: auto;
+    margin: 0 8vw; }
+  .movie-container .section-movie__text {
+    font-size: 1.6rem;
+    margin: 40px 8vw 0;
+    line-height: 1.8;
+    letter-spacing: 1.6px; }
   .movie-container .youtube {
     position: relative;
     width: 100%;
@@ -435,7 +442,71 @@ body {
       left: 0;
       width: 100%;
       height: 100%; }
-  .movie-container__text {
-    font-size: 1.5rem;
-    margin: 3vw auto 0;
-    color: #FFF; }
+
+.city-guide-container {
+  background: #adddfd;
+  position: relative;
+  display: block;
+  text-align: center; }
+  .city-guide-container .section-city-guide__inner {
+    padding: 0 0 40px;
+    margin: 0 0 20vw; }
+  .city-guide-container .section-city-guide__title {
+    width: 65vw;
+    padding: 40px 0 0;
+    margin: 0 auto 40px; }
+    .city-guide-container .section-city-guide__title img {
+      width: 100%;
+      margin: 0 auto; }
+  .city-guide-container .section-city-guide__lead {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    margin: 0 0 60px; }
+  .city-guide-container .section-city-guide__list {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0 2vw 0;
+    margin: 0 auto 40px; }
+  .city-guide-container .section-city-guide__item {
+    width: 30%;
+    margin: 0 10px 30px;
+    text-align: left;
+    box-sizing: border-box; }
+    .city-guide-container .section-city-guide__item--photo {
+      margin: 0 0 15px; }
+      .city-guide-container .section-city-guide__item--photo img {
+        width: 100%; }
+    .city-guide-container .section-city-guide__item--title {
+      margin: 0 0 10px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #000; }
+      .city-guide-container .section-city-guide__item--title span {
+        margin: 0 0 0 10px;
+        font-size: 1.2rem;
+        font-weight: 400; }
+    .city-guide-container .section-city-guide__item--tag {
+      display: inline-block;
+      padding: 3px;
+      margin-right: 10px;
+      background-color: #000;
+      color: #fff; }
+  .city-guide-container .produced {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 20px; }
+    .city-guide-container .produced--shoulder {
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      vertical-align: middle;
+      font-size: 1.4rem; }
+    .city-guide-container .produced--logo {
+      display: inline-block;
+      width: 15vw;
+      vertical-align: top; }
+      .city-guide-container .produced--logo img {
+        width: 100%; }
