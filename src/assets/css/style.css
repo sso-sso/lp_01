@@ -510,3 +510,47 @@ body {
       vertical-align: top; }
       .city-guide-container .produced--logo img {
         width: 100%; }
+
+.section-recommend__recommend-button {
+  display: block;
+  text-align: center;
+  margin: 0 auto 60px; }
+  .section-recommend__recommend-button a {
+    position: relative;
+    display: inline-block;
+    width: 55vw;
+    padding: 20px 0;
+    margin: 0 auto;
+    border: 1px solid #114fc2;
+    font-size: 1.4rem; }
+    .section-recommend__recommend-button a svg {
+      width: 8px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      fill: #114fc2; }
+
+.section-recommend__text {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 40px; }
+
+.section-recommend__button-wrap {
+  display: block;
+  text-align: center; }
+  .section-recommend__button-wrap .btn {
+    display: inline-block;
+    position: relative;
+    width: 30vw;
+    padding: 20px 0;
+    margin: 0 auto;
+    border: 1px solid #114fc2;
+    font-size: 1.4rem; }
+  .section-recommend__button-wrap--places {
+    background-image: url("https://taiwantakao.jp/assets/uploads/2018/09/takaoRecommend_img1.jpg");
+    background-size: cover; }
+  .section-recommend__button-wrap--plans {
+    background-image: url("https://taiwantakao.jp/assets/uploads/2018/09/takaoRecommend_img2.jpg");
+    background-size: cover; }

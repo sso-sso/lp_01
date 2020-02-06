@@ -799,3 +799,60 @@ body {
   }
 }
 
+.section-recommend {
+
+  &__recommend-button {
+    display:  block;
+    text-align: center;
+    margin: 0 auto 60px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      width: 55vw;
+      padding: 20px 0;
+      margin: 0 auto;
+      border: 1px solid #114fc2 ;
+      font-size: 1.4rem;
+
+      svg {
+        width: 8px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        fill: #114fc2;
+      }
+    }
+  }
+  &__text {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 40px;
+  }
+  &__button-wrap {
+    display: block;
+    text-align: center;
+
+    .btn {
+      display: inline-block;
+      position: relative;
+      width: 30vw;
+      padding: 20px 0;
+      margin: 0 auto;
+      border: 1px solid #114fc2 ;
+      font-size: 1.4rem;
+    }
+
+    &--places {
+      background-image: url('https://taiwantakao.jp/assets/uploads/2018/09/takaoRecommend_img1.jpg');
+      background-size: cover;
+    }
+    &--plans {
+      background-image: url('https://taiwantakao.jp/assets/uploads/2018/09/takaoRecommend_img2.jpg');
+      background-size: cover;
+    }
+  }
+}
+
