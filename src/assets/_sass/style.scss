@@ -800,7 +800,9 @@ body {
 }
 
 .section-recommend {
-
+  padding: 0 0 600px;
+  margin: 0 0 60px;
+  // background-image: url()
   &__recommend-button {
     display:  block;
     text-align: center;
@@ -834,15 +836,24 @@ body {
   &__button-wrap {
     display: block;
     text-align: center;
+    margin: 0 auto;
 
     .btn {
       display: inline-block;
       position: relative;
       width: 30vw;
-      padding: 20px 0;
-      margin: 0 auto;
+      padding: 40px 0;
+      margin: 0 15px;
       border: 1px solid #114fc2 ;
       font-size: 1.4rem;
+
+      svg {
+        width: 8px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        fill: #114fc2;
+      }
     }
 
     &--places {
