@@ -867,3 +867,43 @@ body {
   }
 }
 
+.search-flights-container {
+
+  .section-search-flights {
+    &__title {
+      width: 65vw;
+      margin: 0 auto 20px;
+  
+      img {
+        width: 100%;
+        margin: 0 auto 3vw;
+      } 
+    }
+    &__form {
+      width: 60%;
+      padding: 5vw 8vw;
+      margin: 0 auto 60px;
+      display: block;
+
+      // label, input {
+      //   display: block;
+      // }
+
+      .location-label {
+        display: block;
+        margin: 0 0 10px;
+        font-size: 1.4rem;
+      }
+      .location-input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: 0 0 10px;
+        font-size: 2.2rem;
+        border-radius: 5px;
+        border: 1px solid #9c9078;
+      }
+    }
+  }
+}
+

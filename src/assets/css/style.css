@@ -562,3 +562,28 @@ body {
     .section-recommend__button-wrap--plans {
       background-image: url("https://taiwantakao.jp/assets/uploads/2018/09/takaoRecommend_img2.jpg");
       background-size: cover; }
+
+.search-flights-container .section-search-flights__title {
+  width: 65vw;
+  margin: 0 auto 20px; }
+  .search-flights-container .section-search-flights__title img {
+    width: 100%;
+    margin: 0 auto 3vw; }
+
+.search-flights-container .section-search-flights__form {
+  width: 60%;
+  padding: 5vw 8vw;
+  margin: 0 auto 60px;
+  display: block; }
+  .search-flights-container .section-search-flights__form .location-label {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 1.4rem; }
+  .search-flights-container .section-search-flights__form .location-input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 0 0 10px;
+    font-size: 2.2rem;
+    border-radius: 5px;
+    border: 1px solid #9c9078; }

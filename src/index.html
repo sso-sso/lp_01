@@ -417,8 +417,27 @@
 
         <div class="section-search-flights__search-box">
           <form class="section-search-flights__form">
-            <label for=""></label>
-            <input type="text">
+            <div class="from-to">
+              <label class="location-label" for="from">出発地</label>
+              <input class="location-input" id="from" type="text">
+              <label class="location-label" for="to">目的地</label>
+              <input class="location-input" id="to" type="text">
+            </div>
+            
+
+            <input id="return" type="radio" name="return-or-oneway">
+            <label for="return">往復</label>
+            <input id="one-way" type="radio" name="return-or-oneway">
+            <label for="one-way">片道</label>
+
+            <label for="departure-date">出発日</label>
+            <input id="departure-date" type="text">
+            <label for="return-date">現地出発日</label>
+            <input id="return-date" type="text" placeholder="（片道）">
+
+            <div class="book-button-area">
+              <button type="submit" name="" value="">今すぐ予約！</button>
+            </div>
           </form>
         </div>
       </div>
