@@ -425,17 +425,25 @@
             </div>
             
 
-            <input id="return" type="radio" name="return-or-oneway">
-            <label for="return">往復</label>
-            <input id="one-way" type="radio" name="return-or-oneway">
-            <label for="one-way">片道</label>
+            <div class="ticket-type">
+              <input class="ticket-type-input" id="return" type="radio" name="return-or-oneway">
+              <label class="ticket-type-label" for="return">往復</label>
+              <input class="ticket-type-input" id="one-way" type="radio" name="return-or-oneway">
+              <label class="ticket-type-label" for="one-way">片道</label>
+            </div>
 
-            <label for="departure-date">出発日</label>
-            <input id="departure-date" type="text">
-            <label for="return-date">現地出発日</label>
-            <input id="return-date" type="text" placeholder="（片道）">
+            <div class="choose-date">
+              <div class="choose-date__item">
+                <label class="departure-date-label" for="departure-date">出発日</label>
+                <input class="departure-date-input" id="departure-date" type="text">
+              </div>
+              <div class="choose-date__item">
+                <label class="return-date-label" for="return-date">現地出発日</label>
+                <input class="return-date-input" id="return-date" type="text" placeholder="（片道）">
+              </div>
+            </div>
 
-            <div class="book-button-area">
+            <div class="book-button-wrapper">
               <button type="submit" name="" value="">今すぐ予約！</button>
             </div>
           </form>
@@ -444,7 +452,19 @@
     </div>
     <!-- / .section search flights -->
   </div>
-  </div>
+
+  <footer>
+    <div class="share">
+      <div class="share--text">SHARE ON</div>
+      <div class="share--twitter">
+        <a href="#"></a>
+      </div>
+      <div class="share--facebook">
+        <a href="#"></a>
+      </div>
+    </div>
+    <p>Copyright© Kaohsiung City Government. All Rights Reserved.</p>
+  </footer>
 
 <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
