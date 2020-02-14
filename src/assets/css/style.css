@@ -1,0 +1,672 @@
+@charset "UTF-8";
+/* =============================================================================
+  Reset
+============================================================================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: 62.5%;
+  font-weight: inherit; }
+
+/*行の高さをフォントサイズと同じにしています*/
+body {
+  line-height: 1; }
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  margin: 0; }
+
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+*, *:before, *:after {
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+area, a, a img {
+  text-decoration: none; }
+
+img {
+  vertical-align: bottom; }
+
+ol, ul {
+  list-style: none; }
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/*隣接するセルのボーダーを重ねて表示し、間隔を0に指定しています*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/** add
+*
+このelementを使う可能性は低いからいらないかもしれないが
+corporate系だと使うかもしれないので、頭の片隅に置いておく
+*/
+/** add
+*
+あると便利かも？
+*/
+/* =============================================================================
+  Base
+============================================================================= */
+body {
+  color: #114fc2;
+  background: #fcf8e6; }
+
+.top-container {
+  position: relative;
+  width: auto;
+  padding: 80px 0 0; }
+
+.hero-area {
+  height: 1290px; }
+  .hero-area .hero-center {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto; }
+    .hero-area .hero-center h2 {
+      width: 60vw;
+      margin: 0 auto 8vw; }
+      .hero-area .hero-center h2 img {
+        display: block;
+        width: 100%; }
+    .hero-area .hero-center .btn {
+      width: 28vw;
+      height: 40px;
+      position: relative;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      text-align: center; }
+      .hero-area .hero-center .btn span {
+        position: relative;
+        display: block;
+        width: 100%; }
+    .hero-area .hero-center video {
+      width: 100%;
+      height: auto; }
+
+.section__inner-full {
+  display: block; }
+
+#hero-wave {
+  width: 100%;
+  height: 240px;
+  vertical-align: top; }
+
+.intro-wrap {
+  margin: 0 3.3vw; }
+
+.intro-01 {
+  position: relative;
+  display: block;
+  margin-bottom: 6.4vw; }
+  .intro-01__photo-01 {
+    width: 50vw;
+    margin: 0 0 0 2.5vw; }
+    .intro-01__photo-01 img {
+      width: 100%; }
+  .intro-01__text {
+    position: absolute;
+    top: 3.1vw;
+    right: 7vw;
+    width: 25vw;
+    margin: 0; }
+    .intro-01__text img {
+      width: 100%; }
+  .intro-01__photo-02 {
+    position: relative;
+    width: 30vw;
+    margin: -3.1vw auto 0; }
+  .intro-01__sb {
+    position: absolute;
+    top: 3vw;
+    right: -5.5vw;
+    width: 8vw;
+    margin: 0; }
+  .intro-01 img {
+    width: 100%; }
+  .intro-01__illustration--left {
+    position: absolute;
+    left: 3vw;
+    bottom: -2vw; }
+    .intro-01__illustration--left img {
+      width: 16vw; }
+  .intro-01__illustration--right {
+    position: absolute;
+    right: 2.5vw;
+    bottom: 4vw; }
+    .intro-01__illustration--right img {
+      width: 20vw; }
+
+.intro-02 {
+  position: relative;
+  display: block;
+  margin-bottom: 6.4vw; }
+  .intro-02__text {
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 38vw;
+    margin: 0; }
+    .intro-02__text img {
+      width: 100%; }
+  .intro-02__photo-01 {
+    margin: 0 0 0 45vw;
+    padding: 0; }
+    .intro-02__photo-01 img {
+      width: 100%; }
+  .intro-02__photo-02 {
+    position: relative;
+    width: 30vw;
+    margin: -10vw 8vw 0;
+    padding: 0; }
+  .intro-02__sb {
+    position: absolute;
+    top: -3vw;
+    left: -5.5vw;
+    width: 12vw; }
+  .intro-02 img {
+    width: 100%; }
+  .intro-02__illustration--right {
+    position: absolute;
+    right: 9.5vw;
+    bottom: 2vw; }
+    .intro-02__illustration--right img {
+      width: 25vw; }
+
+.intro-03 {
+  position: relative;
+  display: block;
+  margin-bottom: 2.3vw; }
+  .intro-03__photo-01 {
+    width: 50vw;
+    margin: 0 0 0 2.5vw; }
+    .intro-03__photo-01 img {
+      width: 100%; }
+  .intro-03__text {
+    position: absolute;
+    top: 3.1vw;
+    right: 7vw;
+    width: 31vw;
+    margin: 0; }
+    .intro-03__text img {
+      width: 100%; }
+  .intro-03__photo-02 {
+    position: relative;
+    width: 30vw;
+    margin: -11.1vw 0 0 46vw; }
+    .intro-03__photo-02__sb {
+      position: absolute;
+      top: 3vw;
+      right: -5.5vw;
+      width: 8vw;
+      margin: 0; }
+    .intro-03__photo-02 img {
+      width: 100%; }
+  .intro-03__illustration--left {
+    position: absolute;
+    left: 13vw;
+    bottom: -5vw; }
+    .intro-03__illustration--left img {
+      width: 16vw; }
+
+.intro-04 {
+  width: 40vw;
+  padding: 3vw 0 4vw;
+  margin: 0 auto 10vw; }
+  .intro-04__text {
+    width: 33vw;
+    margin: 0 auto 4vw; }
+    .intro-04__text img {
+      width: 100%; }
+  .intro-04__more {
+    width: 320px;
+    height: 70px;
+    text-align: center;
+    margin: 0 auto; }
+    .intro-04__more a {
+      width: 320px;
+      height: 70px;
+      display: block;
+      background: #114fc2;
+      border-radius: 4px;
+      font-size: 1.8rem;
+      line-height: 66px;
+      color: #fff; }
+
+.section-map {
+  background: #fcf51c; }
+  .section-map .section-inner {
+    position: relative;
+    max-width: 960px;
+    padding: 6vw 0 12vw;
+    margin: 0 auto; }
+  .section-map__text {
+    width: 50%; }
+    .section-map__text--title-shoulder {
+      font-weight: bold;
+      padding: 1.7vw 0; }
+    .section-map__text--title img {
+      width: 100%; }
+    .section-map__text--heading {
+      padding: 2vw 0;
+      font-size: 1.6vw; }
+    .section-map__text--list {
+      list-style-position: inside;
+      padding: 0 0 2vw;
+      font-size: 1.4rem; }
+    .section-map__text--text {
+      font-size: 1.4rem;
+      padding: 0 0 2vw; }
+  .section-map__image-map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: auto; }
+    .section-map__image-map img {
+      display: inline-block;
+      margin: 6vw 0 7vw; }
+
+.section-discover {
+  padding: 6vw 0; }
+  .section-discover__text img {
+    display: block;
+    width: 25vw;
+    margin: 0 auto 4vw; }
+  .section-discover__text p {
+    text-align: center;
+    margin: 0 0 10vw; }
+  .section-discover .article-wrap {
+    position: relative; }
+    .section-discover .article-wrap a {
+      position: relative;
+      display: block; }
+    .section-discover .article-wrap:nth-child(even) .article-card {
+      left: 0;
+      right: auto; }
+    .section-discover .article-wrap:nth-child(even) .produced {
+      text-align: right; }
+    .section-discover .article-wrap__image {
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .section-discover .article-wrap__image::after {
+        content: '';
+        display: block;
+        padding-top: 63%; }
+    .section-discover .article-wrap .article-card {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: calc(50% - 40px);
+      background: #fcf8e6; }
+    .section-discover .article-wrap__name {
+      padding: 40px 0 0;
+      margin: 0 40px 15px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden; }
+    .section-discover .article-wrap .kakudate {
+      width: 275px;
+      height: 75px;
+      background: url(../img/hw_kengo_kakudate.png) no-repeat;
+      background-size: 275px auto;
+      background-position: 0 bottom; }
+    .section-discover .article-wrap .sato {
+      width: 275px;
+      height: 40px;
+      background: url(../img/hw_kenji_sato.png) no-repeat;
+      background-size: 275px auto;
+      background-position: 0 bottom; }
+    .section-discover .article-wrap .takesue {
+      width: 275px;
+      height: 40px;
+      background: url(../img/hw_shiori_takesue.png) no-repeat;
+      background-size: 275px auto;
+      background-position: 0 bottom; }
+    .section-discover .article-wrap__title {
+      margin: 0 40px 15px;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #010101; }
+    .section-discover .article-wrap__description {
+      margin: 0 40px 35px;
+      font-size: 1.3rem;
+      letter-spacing: .07rem;
+      color: #9c9078; }
+    .section-discover .article-wrap .produced {
+      margin: 0 40px; }
+      .section-discover .article-wrap .produced a {
+        display: inline-block;
+        height: 80px; }
+      .section-discover .article-wrap .produced--shoulder {
+        display: inline-block;
+        margin: 30px 10px 0 0;
+        color: #000; }
+      .section-discover .article-wrap .produced--logo {
+        width: 100px;
+        display: inline-block;
+        margin: 0 5px; }
+      .section-discover .article-wrap .produced .cinra {
+        width: 102px;
+        height: 17px;
+        vertical-align: text-bottom; }
+      .section-discover .article-wrap .produced .herenow {
+        width: 116px;
+        height: 35px;
+        vertical-align: middle; }
+      .section-discover .article-wrap .produced .sheis {
+        width: 101px;
+        height: 27px;
+        vertical-align: baseline; }
+
+.movie-container {
+  background: #0a8cd6; }
+  .movie-container .section-movie__inner {
+    padding: 40px 0 100px;
+    text-align: center;
+    color: #000; }
+  .movie-container .section-movie__title {
+    width: 65vw;
+    margin: 0 auto 20px; }
+    .movie-container .section-movie__title img {
+      width: 100%;
+      margin: 0 auto 3vw; }
+  .movie-container .section-movie__lead {
+    margin: 0 8vw 40px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 1.6px; }
+  .movie-container .section-movie__movie {
+    position: relative;
+    width: auto;
+    margin: 0 8vw; }
+  .movie-container .section-movie__text {
+    font-size: 1.6rem;
+    margin: 40px 8vw 0;
+    line-height: 1.8;
+    letter-spacing: 1.6px; }
+  .movie-container .youtube {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 56.25%;
+    overflow: hidden; }
+    .movie-container .youtube iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
+.city-guide-container {
+  background: #adddfd;
+  position: relative;
+  display: block;
+  text-align: center; }
+  .city-guide-container .section-city-guide__inner {
+    padding: 0 0 40px;
+    margin: 0 0 20vw; }
+  .city-guide-container .section-city-guide__title {
+    width: 65vw;
+    padding: 40px 0 0;
+    margin: 0 auto 40px; }
+    .city-guide-container .section-city-guide__title img {
+      width: 100%;
+      margin: 0 auto; }
+  .city-guide-container .section-city-guide__lead {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    margin: 0 0 60px; }
+  .city-guide-container .section-city-guide__list {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0 2vw 0;
+    margin: 0 auto 40px; }
+  .city-guide-container .section-city-guide__item {
+    width: 30%;
+    margin: 0 10px 30px;
+    text-align: left;
+    box-sizing: border-box; }
+    .city-guide-container .section-city-guide__item--photo {
+      margin: 0 0 15px; }
+      .city-guide-container .section-city-guide__item--photo img {
+        width: 100%; }
+    .city-guide-container .section-city-guide__item--title {
+      margin: 0 0 10px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #000; }
+      .city-guide-container .section-city-guide__item--title span {
+        margin: 0 0 0 10px;
+        font-size: 1.2rem;
+        font-weight: 400; }
+    .city-guide-container .section-city-guide__item--tag {
+      display: inline-block;
+      padding: 3px;
+      margin-right: 10px;
+      background-color: #000;
+      color: #fff; }
+  .city-guide-container .produced {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 20px; }
+    .city-guide-container .produced--shoulder {
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      vertical-align: middle;
+      font-size: 1.4rem; }
+    .city-guide-container .produced--logo {
+      display: inline-block;
+      width: 15vw;
+      vertical-align: top; }
+      .city-guide-container .produced--logo img {
+        width: 100%; }
+
+.section-recommend {
+  padding: 0 0 600px;
+  margin: 0 0 60px; }
+  .section-recommend__recommend-button {
+    display: block;
+    text-align: center;
+    margin: 0 auto 60px; }
+    .section-recommend__recommend-button a {
+      position: relative;
+      display: inline-block;
+      width: 55vw;
+      padding: 20px 0;
+      margin: 0 auto;
+      border: 1px solid #114fc2;
+      font-size: 1.4rem; }
+      .section-recommend__recommend-button a svg {
+        width: 8px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        fill: #114fc2; }
+  .section-recommend__text {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 40px; }
+  .section-recommend__button-wrap {
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+    .section-recommend__button-wrap .btn {
+      display: inline-block;
+      position: relative;
+      width: 30vw;
+      padding: 40px 0;
+      margin: 0 15px;
+      border: 1px solid #114fc2;
+      font-size: 1.4rem; }
+      .section-recommend__button-wrap .btn svg {
+        width: 8px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        fill: #114fc2; }
+    .section-recommend__button-wrap--places {
+      background-image: url("https://taiwantakao.jp/assets/uploads/2018/09/takaoRecommend_img1.jpg");
+      background-size: cover; }
+    .section-recommend__button-wrap--plans {
+      background-image: url("https://taiwantakao.jp/assets/uploads/2018/09/takaoRecommend_img2.jpg");
+      background-size: cover; }
+
+.search-flights-container .section-search-flights {
+  padding: 0 0 40px;
+  margin: 0 4vw; }
+  .search-flights-container .section-search-flights__title {
+    width: 65vw;
+    margin: 0 auto 20px; }
+    .search-flights-container .section-search-flights__title img {
+      width: 100%;
+      margin: 0 auto 3vw; }
+  .search-flights-container .section-search-flights__search-box {
+    margin: 0 auto;
+    padding: 0 0 40px; }
+  .search-flights-container .section-search-flights__form {
+    display: block;
+    width: 60%;
+    padding: 5vw 8vw;
+    margin: 0 auto 60px;
+    background-color: #fff;
+    border-radius: 10px; }
+    .search-flights-container .section-search-flights__form label {
+      font-size: 1.4rem;
+      margin: 0 0 10px;
+      color: #000; }
+    .search-flights-container .section-search-flights__form input {
+      height: 50px;
+      margin: 0 0 10px;
+      padding: 0 10px;
+      font-size: 2.2rem;
+      border-radius: 5px;
+      border: 1px solid #9c9078; }
+    .search-flights-container .section-search-flights__form input[placeholder] {
+      font-style: italic; }
+    .search-flights-container .section-search-flights__form .location-label {
+      display: block;
+      margin: 0 0 10px; }
+    .search-flights-container .section-search-flights__form .location-input {
+      display: block;
+      width: 100%; }
+    .search-flights-container .section-search-flights__form .ticket-type {
+      display: block;
+      margin: 0 0 10px; }
+    .search-flights-container .section-search-flights__form .ticket-type-input {
+      height: unset;
+      margin: 0 5px 0 0; }
+    .search-flights-container .section-search-flights__form .ticket-type-label {
+      margin: 0 10px 0 0; }
+    .search-flights-container .section-search-flights__form .choose-date {
+      display: -webkit-box;
+      display: flex;
+      margin: 0 0 20px;
+      -webkit-box-pack: justify;
+      justify-content: space-between; }
+      .search-flights-container .section-search-flights__form .choose-date__item {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        width: calc(50% - 10px);
+        margin: 0; }
+    .search-flights-container .section-search-flights__form .book-button-wrapper {
+      text-align: center; }
+      .search-flights-container .section-search-flights__form .book-button-wrapper button {
+        width: 200px;
+        padding: 15px 20px;
+        font-size: 1.6rem;
+        background-color: #6cd0b2;
+        color: #fff;
+        border-radius: 40px; }
+
+footer {
+  padding: 0 0 50px;
+  margin: 0 auto;
+  text-align: center; }
+  footer .share {
+    margin: 0 auto 20px; }
+    footer .share--text {
+      display: block;
+      margin: 0 auto 10px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #000; }
+    footer .share--twitter {
+      display: inline-block;
+      width: 20px;
+      height: 17px;
+      margin: 0 10px; }
+      footer .share--twitter a {
+        display: inline-block;
+        width: 20px;
+        height: 17px;
+        background: url(../img/twitter.svg) no-repeat;
+        background-size: cover; }
+    footer .share--facebook {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: 0 10px; }
+      footer .share--facebook a {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../img/facebook.png) no-repeat;
+        background-size: cover; }
+
+.copyright {
+  font-size: 1.4rem;
+  color: #000;
+  letter-spacing: 1.8px; }
