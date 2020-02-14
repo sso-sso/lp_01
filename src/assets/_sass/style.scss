@@ -883,6 +883,10 @@ body {
         margin: 0 auto 3vw;
       } 
     }
+    &__search-box {
+      margin: 0 auto;
+      padding: 0 0 40px;
+    }
     &__form {
       display: block;
       width: 60%;
@@ -894,6 +898,7 @@ body {
       label {
         font-size: 1.4rem;
         margin: 0 0 10px;
+        color: #000;
       }
       input {
         height: 50px;
@@ -1005,4 +1010,9 @@ footer {
     }
   }
 }
-
+.copyright {
+  font-size: 1.4rem;
+  color: #000;
+  letter-spacing: 1.8px;
+}
+}

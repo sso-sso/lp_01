@@ -570,6 +570,9 @@ body {
     .search-flights-container .section-search-flights__title img {
       width: 100%;
       margin: 0 auto 3vw; }
+  .search-flights-container .section-search-flights__search-box {
+    margin: 0 auto;
+    padding: 0 0 40px; }
   .search-flights-container .section-search-flights__form {
     display: block;
     width: 60%;
@@ -579,7 +582,8 @@ body {
     border-radius: 10px; }
     .search-flights-container .section-search-flights__form label {
       font-size: 1.4rem;
-      margin: 0 0 10px; }
+      margin: 0 0 10px;
+      color: #000; }
     .search-flights-container .section-search-flights__form input {
       height: 50px;
       margin: 0 0 10px;
@@ -661,3 +665,8 @@ footer {
         height: 20px;
         background: url(../img/facebook.png) no-repeat;
         background-size: cover; }
+
+.copyright {
+  font-size: 1.4rem;
+  color: #000;
+  letter-spacing: 1.8px; }
