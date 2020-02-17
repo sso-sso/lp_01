@@ -129,6 +129,33 @@ corporate系だと使うかもしれないので、頭の片隅に置いてお�
 //   top: -0.5em;
 // }
 
+/* =============================================================================
+  Utility
+============================================================================= */
+
+// Break Point
+$mq-small: 768px;
+// $mq-medium: 768px;
+$mq-large: 1280px;
+
+// Media Queries
+@mixin mq-sp {
+  @media screen and ( max-width: $mq-small ) {
+    @content;
+  }
+}
+
+// @mixin mq-tab {
+//   @media screen and ( min-width: $mq-small + 1 ) {
+//     @content;
+//   }
+// }
+
+@mixin mq-pc {
+  @media screen and ( min-width: $mq-small + 1 ) {
+    @content;
+  }
+}
 
 /* =============================================================================
   Base
@@ -231,6 +258,10 @@ body {
   &__photo-01 {
     width: 50vw;
     margin: 0 0 0 2.5vw;
+
+    @include mq-sp {
+      width: 100%;
+    }
     
     img {
       width: 100%;
@@ -243,6 +274,15 @@ body {
     right: 7vw;
     width: 25vw;
     margin: 0;
+
+    @include mq-sp {
+      position: relative;
+      top: 0;
+      left: 40vw;
+      right: auto;
+      width: 45vw;
+      margin: 3vw 2vw;
+    }
 
     img {
       width: 100%;
@@ -468,10 +508,13 @@ body {
 
   &__text {
     width: 50%;
+    letter-spacing: .08rem;
+    line-height: 2;
 
     &--title-shoulder {
-      font-weight: bold;
       padding: 1.7vw 0;
+      font-weight: bold;
+      font-size: 1.4rem;
     }
 
     &--title {
@@ -524,8 +567,9 @@ body {
     }
 
     p {
-      text-align: center;
       margin: 0 0 10vw;
+      text-align: center;
+      font-size: 1.4rem;
     }
   }
 
@@ -607,6 +651,7 @@ body {
       margin: 0 40px 35px;
       font-size: 1.3rem;
       letter-spacing: .07rem;
+      line-height: 1.6;
       color: #9c9078;
     }
 
@@ -672,7 +717,7 @@ body {
       margin: 0 8vw 40px;
       font-size: 1.4rem;
       line-height: 1.8;
-      letter-spacing: 1.6px;
+      letter-spacing: .06rem;
     }
   
     &__movie {
@@ -684,7 +729,7 @@ body {
       font-size: 1.6rem;
       margin: 40px 8vw 0;
       line-height: 1.8;
-      letter-spacing: 1.6px;
+      letter-spacing: .06rem;
     }
   }
 
@@ -730,7 +775,7 @@ body {
     &__lead {
       font-size: 1.4rem;
       line-height: 1.8;
-      letter-spacing: 1.6px;
+      letter-spacing: .06rem;
       margin: 0 0 60px;
     }
 
@@ -871,7 +916,8 @@ body {
 .search-flights-container {
 
   .section-search-flights {
-    padding: 0 0 40px;
+    position: relative;
+    padding: 40px 0;
     margin: 0 4vw;
 
     &__title {
@@ -883,17 +929,48 @@ body {
         margin: 0 auto 3vw;
       } 
     }
+
+    &__illustration {
+      position: absolute;
+      bottom: -10vw;
+      right: -120px;
+      width: 230px;
+      height: auto;
+      z-index: 4;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .sky-scanner-logo {
+      position: absolute;
+      top: 40px;
+      right: 10%;
+      width: 10.4167rem;
+      height: 1.25rem;
+
+      span {
+        display: inline-block;
+        width: 10.4167rem;
+        height: 1.25rem;
+        background: center / contain no-repeat url(https://widgets.skyscanner.net/widget-server/powered-by-skyscanner-logo.svg?colour=%230770E3);
+      }
+    }
+
     &__search-box {
+      position: relative;
       margin: 0 auto;
       padding: 0 0 40px;
-    }
-    &__form {
-      display: block;
-      width: 60%;
-      padding: 5vw 8vw;
-      margin: 0 auto 60px;
       background-color: #fff;
       border-radius: 10px;
+    }
+
+    &__form {
+      display: block;
+      width: 80%;
+      padding: 40px 0 0;
+      margin: 0 auto;
 
       label {
         font-size: 1.4rem;
@@ -902,7 +979,7 @@ body {
       }
       input {
         height: 50px;
-        margin: 0 0 10px;
+        margin: 0 0 15px;
         padding: 0 10px;
         font-size: 2.2rem;
         border-radius: 5px;
@@ -924,7 +1001,7 @@ body {
 
       .ticket-type {
         display: block;
-        margin: 0 0 10px;
+        margin: 0 0 15px;
       }
       .ticket-type-input {
         height: unset;
@@ -1013,6 +1090,5 @@ footer {
 .copyright {
   font-size: 1.4rem;
   color: #000;
-  letter-spacing: 1.8px;
-}
+  letter-spacing: .08rem;
 }

@@ -29,7 +29,7 @@
     <!-- / .hero area -->
 
     <div class="top-container">
-      <canvas id="hero-wave" width="" height=""></canvas>
+      <canvas class="hero-wave" width="" height=""></canvas>
       <div class="intro-wrap">
         <div class="intro-01">
           <!-- <div class="section__inner"> -->
@@ -113,7 +113,6 @@
           </div>
         </div>
       </div>
-      
 
       <div class="section-map">
         <div class="section-inner">
@@ -130,8 +129,8 @@
               日本からは直行便が便利！<br>台北からもアクセス抜群。
             </div>
             <ul class="section-map__text--list">
-              <li>東京からは直行便で4時間。大阪からなら3.5時間。</li>
-              <li>台北まで新幹線で約1.5時間</li>
+              <li>・東京からは直行便で4時間。大阪からなら3.5時間。</li>
+              <li>・台北まで新幹線で約1.5時間</li>
             </ul>
             <div class="section-map__text--heading">
               高雄では、ビーチも、自然豊かな山も楽しめる
@@ -292,6 +291,7 @@
 
     <!-- section city guide -->
     <div class="city-guide-container">
+
       <div class="section-city-guide__inner">
         <h2 class="section-city-guide__title">
           <img src="https://taiwantakao.jp/assets/themes/kaohsiung/assets/images/hw_city_guide.png" alt="">
@@ -383,11 +383,7 @@
         </ul>
 
       </div>
-    </div>
-    <!-- / .section city guide -->
 
-    <!-- section recommend -->
-    <div class="recommend-container">
       <div class="section-recommend">
         <div class="section-recommend__recommend-button">
           <a href="#">おすすめスポット一覧
@@ -405,17 +401,25 @@
           </a>
         </div>
       </div>
+
+      <canvas class="hero-wave" width="" height=""></canvas>
     </div>
-    <!-- / .section recommend -->
+    <!-- / .section city guide -->
 
     <!-- section search flights -->
     <div class="search-flights-container">
       <div class="section-search-flights">
+        <div class="section-search-flights__illustration">
+          <img src="assets/img/search_flights_ill1.png" alt="">
+        </div>
         <h2 class="section-search-flights__title">
           <img src="assets/img/hw_search_flights.png" alt="">
         </h2>
 
         <div class="section-search-flights__search-box">
+          <div class="sky-scanner-logo">
+            <span class=""></span>
+          </div>
           <form class="section-search-flights__form">
             <div class="from-to">
               <label class="location-label" for="from">出発地</label>
@@ -423,7 +427,6 @@
               <label class="location-label" for="to">目的地</label>
               <input class="location-input" id="to" type="text">
             </div>
-            
 
             <div class="ticket-type">
               <input class="ticket-type-input" id="return" type="radio" name="return-or-one-way">
@@ -465,6 +468,8 @@
     </div>
     <p class="copyright">Copyright© Kaohsiung City Government. All Rights Reserved.</p>
   </footer>
+
+  <div class=""></div>
 
 <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
